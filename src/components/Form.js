@@ -3,13 +3,13 @@ import axios from 'axios'
 
 const Form = props => {
   const [username, setUsername] = useState('')
-
+  
   const handleSubmit = event => {
     event.preventDefault()
 
     axios.get(`https://api.github.com/users/${username}`).then(resp => {
       props.onSubmit(resp.data)
-      setUsername('')
+      setUsername('wheeldogg')
     })
   }
 
@@ -19,11 +19,12 @@ const Form = props => {
         type="text"
         value={username}
         onChange={event => setUsername(event.target.value)}
-        placeholder="GitHub username"
+        placeholder="Enter Github username"
         required
       />
-      <button type="submit">Add card</button>
+      <button type="submit" value='add'>Add card</button>
     </form>
+
   )
 }
 
