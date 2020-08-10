@@ -21,7 +21,6 @@ const App = () => {
     console.log('remove card')
     const newCardList = cards.filter((item) => item.id !== id);
     setCards(newCardList);
-
   }
 
   return (

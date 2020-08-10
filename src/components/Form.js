@@ -4,6 +4,8 @@ import axios from 'axios'
 const Form = props => {
   const [username, setUsername] = useState('')
   
+  console.log(username)
+
   const handleSubmit = event => {
     event.preventDefault()
 
@@ -22,10 +24,19 @@ const Form = props => {
         placeholder="Enter Github username"
         required
       />
+
       <button type="submit" value='add'>Add card</button>
     </form>
 
   )
 }
+
+// third challenge
+
+// <input type="text" value={username} onKeyPress={this.handleKeyPress} />
+
+//add search on every keypress
+
+// add on hover
 
 export default Form
